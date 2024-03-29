@@ -22,7 +22,7 @@ pipeline {
     stage('SonarQube Analysis') {
             steps {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://35.93.32.121:9000/ -Dsonar.login=squ_a24c6d39ad4324aad36228e6c380253502cdf47a -Dsonar.projectName=spring-boot-app \
-                    -Dsonar.java.binaries=. \
+                    -Dsonar.java.binaries=./java-maven-sonar-argocd-helm-k8s/spring-boot-app \
                     -Dsonar.projectKey=spring-boot-app '''
                 
             }
