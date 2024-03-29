@@ -1,4 +1,9 @@
 pipeline {
+  environment {
+        SCANNER_HOME=tool 'sonar-scanner'
+        IMAGE_TAG = "${BUILD_NUMBER}"
+        
+  }
   agent {
     docker {
       image 'abhishekf5/maven-abhishek-docker-agent:v1'
